@@ -38,10 +38,9 @@ class IndexMap {
    * @param key if number => Value gets by index, else gets by key
    * @param idx
    */
-  get(key: string | number, idx?: number): string {
+  get(key: string | number): string {
     if (typeof key === 'number') {
       return getFirstKey(this._collection[key]);
-      // return Object.values(this._collection[key])[0];
     }
 
     if (typeof key === 'string') {
